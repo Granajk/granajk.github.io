@@ -1,0 +1,41 @@
+@import url('./vars.less');
+
+body{
+    background: @iLineral;
+}
+.header,
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #888;
+    height: 10vh;
+    color: @icol;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+//mixins миксины
+.block(@iHBlock: 100px, @iWBlock: 200px) {
+    height: @iHBlock;
+    width: @iWBlock;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.item{
+    .block(@iHBlock: 150px,@iWBlock: 250px);
+}
